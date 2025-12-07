@@ -1,0 +1,22 @@
+# Firmware & Operation
+
+The robotic arm is controlled by the STC15W408AS Dual-Joystick & Servo Controller. 
+
+Principle of Operation:
+1. Joystick Input:
+   - Each joystick provides analog voltage (0–5V) for X and Y axes.
+   - Signals are read by the onboard ADC of the STC15 microcontroller.
+
+2. PWM Output:
+   - The microcontroller converts joystick positions into servo angles.
+   - Generates PWM signals (1–2 ms pulse every 20 ms) for SG1–SG4 outputs.
+   - Each servo moves according to joystick direction.
+
+3. Buttons & LEDs:
+   - KEY1–KEY9 provide digital input for modes or claw control.
+   - LEDs indicate joystick movements and button presses.
+
+Usage Notes:
+- The board is fully autonomous.
+- No coding or firmware modification is required.
+- All servo and joystick functions are controlled directly by the STC15 firmware.
